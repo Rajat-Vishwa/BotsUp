@@ -253,7 +253,7 @@ def set_data():
     data = []
     data_path = filedialog.askopenfilename(filetypes=(("xlsx", "*.xlsx"),("xls", "*.xls")))
     try:
-        df = pd.read_excel(data_path)
+        df = pd.read_excel(data_path, header=None)
         df.fillna(0,inplace=True)
         excel_data = df.values.tolist()
         print(excel_data)
