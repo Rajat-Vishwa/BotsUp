@@ -43,7 +43,7 @@ def decrypt(val):
     dcryp = fernet.decrypt(val.encode())
     return dcryp.decode()
 
-    
+
 
 def check_exists_by_xpath(xpath):
     try:
@@ -55,7 +55,6 @@ def check_exists_by_xpath(xpath):
 def element_presence(by, xpath, time):
     element_present = EC.presence_of_element_located((By.XPATH, xpath))
     WebDriverWait(driver, time).until(element_present)
-
 
 def send_message(url,index):
     ANCHOR_XPATH = webpage_data['ANCHOR_XPATH']
@@ -151,15 +150,13 @@ def start_bot():
         check_connection()
     except NameError or ValueError as e:
         messagebox.showerror("Error!",  f"Please select data files.\n\n{str(e)}")
-        print(e)
-    
+        print(e)    
     except TimeoutException:
         info_text.config(text="Timeout!")
         if alive:
             start_bot()
         else:
             info_text.config(text="Ideal")
-    
     except NoSuchWindowException as e:
         popup = tk.Toplevel()
         popup.title("Error!")
@@ -171,7 +168,6 @@ def start_bot():
         popup.destroy()
         abort()
         check_connection()
-
     except Exception as e:
         try:
             exp_name  = ' '.join(e.msg.split()[0:3])
@@ -202,6 +198,7 @@ def start_bot():
                 start_bot()
             else:
                 info_text.config(text="Ideal")
+                
 
 def start_thread():
     global thread, alive
@@ -232,7 +229,7 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 DRIVER_PATH = resource_path('./driver/chromedriver.exe')
-#DRIVER_PATH = 'C:\Program Files (x86)\chromedriver.exe'
+#DRIVER_PATH = 'chromedriver.exe'
 
 def set_log_path():
     global LOG_PATH
@@ -269,7 +266,6 @@ def set_data():
         win.update()
     except Exception as e:
         messagebox.showerror("Error!",  e)
-    
 
 def set_img():
     global IMG_PATH 
