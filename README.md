@@ -1,7 +1,7 @@
 # BotsUpV3
 
-This a project I made to send automatic bulk messages on whatsapp for marketing purposes.
-I made the entire UI with TKinter. (I am a bad designer)
+This is a project I made to send automatic bulk messages on whatsapp for marketing purposes.
+I made the entire UI with TKinter (I am a bad designer).
 In order for the software to start, you need to login with your creds which are stored in an SQL database.
 
 (For TechSoc, Username : TechSoc ; Password : 1234)
