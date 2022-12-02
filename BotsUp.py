@@ -1,4 +1,3 @@
-from socket import timeout
 import pandas as pd
 import tkinter as tk
 from tkinter import filedialog, messagebox
@@ -399,6 +398,10 @@ def connect_server():
     try:
         global database, cursor, online
         print("Connecting to mysql server...")
+        print('host : ',decrypt(server_creds['host']))
+        print('user : ',decrypt(server_creds['user']))
+        print('database : ',decrypt(server_creds['database']))
+        print('password : ',decrypt(server_creds['password']))
         LoginFooter.config(text='Connecting...', fg='blue')
         database = mysql.connector.connect(
         host= decrypt(server_creds['host']),
@@ -411,10 +414,10 @@ def connect_server():
         LoginFooter.config(text='Online', fg='green')
         info_text.config(text='Online', fg='green')
         print("Connection Successful")
-    except:
+    except Exception as e:
         LoginFooter.config(text='Offline', fg='red')
         info_text.config(text='Offline', fg='green')
-        prompt = "Can't connect to the server.\nPlease check your internet connection."
+        prompt = "Can't connect to the server.\nPlease check your internet connection.\n" + str(e)
         messagebox.showerror("Error!", prompt)
         online = False
 
