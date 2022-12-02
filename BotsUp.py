@@ -401,7 +401,7 @@ def connect_server():
         print('host : ',decrypt(server_creds['host']))
         print('user : ',decrypt(server_creds['user']))
         print('database : ',decrypt(server_creds['database']))
-        print('password : ',decrypt(server_creds['password']))
+        #print('password : ',decrypt(server_creds['password']))
         LoginFooter.config(text='Connecting...', fg='blue')
         database = mysql.connector.connect(
         host= decrypt(server_creds['host']),
