@@ -12,8 +12,7 @@ After that you can select attachments to send, if you want.
 Clicking the send button will take you to whatsApp web portal where you need to scan your with your smartphone.
 After that BotsUp will automatically send the message and attachment to all the phone numbers in the excel sheet.
 
-
-PS : You might notice some bugs due to change to Win11 (i guess)
+You might notice some bugs due to change to Win11 (i guess)
 
 Download standalone exe : https://drive.google.com/file/d/1him3YZ--638YllOlFM0VqwSYAunelcEM/view?usp=sharing
 NOTE: After extracting the above file, please change the config.json file to the one in the repository, as the old database is closed.
