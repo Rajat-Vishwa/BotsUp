@@ -15,7 +15,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException, TimeoutException, NoSuchWindowException
 import time, json
 
-LOG_PATH = "invalid.txt"
+LOG_PATH = "invalidNumbers.txt"
 timeout = 20
 msg_sent = 0
 alive = True
